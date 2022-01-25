@@ -1,0 +1,255 @@
+@import './colors';
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.6rem;
+}
+
+.pizza-bg {
+	position: relative;
+	background-image: url('../img/header640.png');
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+	.pizza-shadow {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	.pizza-text {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-shadow: 4px 4px 4px #000;
+		font-size: 2rem;
+		font-family: 'Pacifico', cursive;
+		span {
+			color: $orange;
+			vertical-align: -0.35em;
+		}
+
+		color: $pure-white;
+	}
+}
+.section {
+	min-height: calc(100vh - 100px - 50px);
+
+	background-color: $brown;
+	padding: 1em;
+}
+.section-heading {
+	text-align: center;
+	margin: 0.5em;
+	font-weight: normal;
+	color: $pure-white;
+}
+.wrapper {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+}
+
+.generator-btn {
+	display: block;
+	width: 50%;
+	background-color: $dark;
+	margin: 0 auto;
+	text-align: center;
+	text-decoration: none;
+	color: orange;
+}
+
+.isDisabled {
+	color: currentColor;
+	pointer-events: none;
+	cursor: not-allowed;
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+.div-list {
+	background-color: $pure-white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 1em 0;
+	max-width: 500px;
+	box-shadow: 3px 3px 6px $dark;
+	min-height: 152px;
+
+	.list {
+		display: flex;
+		list-style: none;
+		justify-content: flex-start;
+		align-items: center;
+		padding: 1em;
+	}
+
+	.list-item {
+		margin-right: 0.85em;
+		width: 30%;
+		max-width: 50px;
+		&:hover {
+			opacity: 0.4;
+			cursor: pointer;
+		}
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+	p {
+		font-weight: bold;
+	}
+}
+.total-price {
+	background-color: $dark;
+	line-height: 2em;
+	padding-left: 1em;
+	color: $pure-white;
+}
+.total-price--right {
+	display: none;
+}
+
+.pizza-render {
+	margin: 0 auto;
+	width: 250px;
+	height: 250px;
+
+	.pizza-img {
+		width: 100%;
+		height: 100%;
+
+		background-size: cover;
+		background-position: center;
+		background-image: url('../img/pizza/olive.png'), url('../img/pizza/paprica.png'), url('../img/pizza/salami.png'),
+			url('../img/pizza/mushrooms.png'), url('../img/pizza/onion.png'), url('../img/pizza/chess-body.png');
+	}
+}
+
+.pizza-order {
+	flex-basis: 25%;
+	table {
+		width: 100%;
+		max-width: 300px;
+		margin: 0 auto;
+		background-color: $pure-white;
+		box-shadow: 3px 3px 6px $dark;
+		margin-bottom: 0.5em;
+		border: 1px solid black;
+
+		th {
+			border-bottom: solid 1px black;
+		}
+
+		td {
+			padding-bottom: 0.2em;
+			padding-left: 0.2em;
+
+			&:last-child {
+				text-align: center;
+			}
+		}
+		.order-price {
+			text-align: center;
+		}
+		.total-price {
+			font-weight: bold;
+		}
+	}
+}
+
+.footer {
+	background-color: #000;
+	color: white;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+
+//media
+@media (min-width: 560px) {
+	.div-list {
+		margin: 1em auto;
+		.total-price {
+		}
+		.list {
+			justify-content: space-around;
+
+			padding: 1.5em;
+		}
+	}
+	.pizza-render {
+		width: 300px;
+		height: 300px;
+	}
+}
+
+@media (min-width: 880px) {
+	.pizza-bg {
+		height: 250px;
+		.pizza-text {
+			font-size: 4rem;
+		}
+	}
+	.section {
+		min-height: calc(100vh - 250px - 50px);
+		padding: 1em 2em;
+	}
+
+	.list-box {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		.total-price {
+			padding-left: 2em;
+		}
+		.total-price--down {
+			display: none;
+		}
+		.total-price--right {
+			display: block;
+		}
+	}
+	.div-list {
+		width: 45%;
+	}
+	.render {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	.pizza-render {
+		width: 350px;
+		height: 350px;
+	}
+}
+@media (min-width: 992px) {
+	.pizza-bg {
+		height: 300px;
+		background-image: url('../img/header1920.png');
+		.pizza-text {
+			font-size: 6rem;
+		}
+	}
+	.section {
+		min-height: calc(100vh - 300px - 50px);
+	}
+}

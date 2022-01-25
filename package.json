@@ -1,0 +1,22 @@
+{
+  "name": "pizzagenerator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.5.0",
+    "eslint-config-airbnb": "^19.0.2"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2"
+  }
+}

@@ -1,0 +1,43 @@
+<h2 class="section-heading">Select your favorites addons to pizza!</h2>
+<div class="list-box">
+    <div class="div-list addons">
+
+        <ul class="list addons">
+
+            {{#each addons}}
+                <li data-addon="{{this.[0]}}" draggable="true" class="list-item">
+                    <img src="/img/pizza/icons/{{this.[0]}}.png" alt="icon {{this.[0]}}">
+                    <p>{{pricify this.[1]}}$</p>
+                </li>
+            {{/each}}
+        </ul>
+        <p class="total-price total-price--right">Click addons or move right =></p>
+        <p class="total-price total-price--down">Click addon</p>
+    </div>
+    <div class="div-list addons">
+        <ul class="list chosen-addons">
+
+
+        </ul>
+        <p class="total-price">Click Generated</p>
+
+    </div>
+
+    <a class="generator-btn isDisabled" href="#" type="button">Generated</a>
+</div>
+
+<!--przekazać obiekt :D-->
+
+{{#if pizzaAddons}}
+    <div class="render">
+    {{> render-pizza}}
+    {{> render-order}}
+    </div>
+
+   {{else}}
+    <h2 class=" section-heading">please select addons and click the button</h2>
+
+
+{{/if}}
+
+<script src="/js/main.js"></script>

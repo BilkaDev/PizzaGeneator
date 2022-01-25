@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Generator in express | Marcin Bilka</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,300&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="pizza-bg">
+            <div class="pizza-shadow"></div>
+            <div class="pizza-text">
+                <h1>Pizza<span>Generator</span></h1>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="section">
+            <div class="wrapper">
+                <!-- tutaj bedzie boody {{{body}}}-->
+                <h2 class="section-heading">Select your favorites addons to pizza!</h2>
+                <div class="list-box">
+                    <div class="div-list addons">
+                        <ul class="list addons">
+                            <li data-addon="onion" draggable="true" class="list-item">
+                                <img src="img/pizza/icons/onion.png" alt="icon onion">
+                                <p>5,00$</p>
+                            </li>
+                            <li data-addon="olive" draggable="true" class="list-item">
+                                <img src="img/pizza/icons/onion.png" alt="icon onion">
+                                <p>5,00$</p>
+                            </li>
+                            <li data-addon="mushrooms" draggable="true" class="list-item">
+                                <img src="img/pizza/icons/onion.png" alt="icon onion">
+                                <p>5,00$</p>
+                            </li>
+                            <li data-addon="paprica" draggable="true" class="list-item">
+                                <img src="img/pizza/icons/onion.png" alt="icon onion">
+                                <p>5,00$</p>
+                            </li>
+                            <li data-addon="salami" draggable="true" class="list-item">
+                                <img src="img/pizza/icons/onion.png" alt="icon onion">
+                                <p>5,00$</p>
+                            </li>
+                        </ul>
+                        <p class="total-price total-price--right">Click or addons - move right =></p>
+                        <p class="total-price total-price--down">Click addon</p>
+                    </div>
+                    <div class="div-list addons">
+                        <ul class="list chosen-addons">
+
+
+                        </ul>
+                        <p class="total-price">Total price: 50$</p>
+
+                    </div>
+
+                    <a class="generator-btn isDisabled" href="#" type="button">Generuj</a>
+                </div>
+
+
+
+
+
+                <!-- <h2 class=" section-heading">please select add-ons and click the button</h2> -->
+
+                <div class="render">
+                    <div class="pizza-box">
+                        <h2 class=" section-heading">Your favorites pizza:</h2>
+                        <div class="pizza-render">
+
+                            <div class="pizza-img"></div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="pizza-order">
+                        <h2 class=" section-heading">Your order:</h2>
+                        <table>
+                            <tr>
+                                <th>Addons</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                            <tr>
+                                <td class="order-addons">Onion</td>
+                                <td class="order-price">5,50$</td>
+                                <td class="order-deleted">x</td>
+                            </tr>
+                            <tr>
+                                <td class="order-addons">Olive</td>
+                                <td class="order-price">3,50$</td>
+                                <td class="order-deleted">x</td>
+
+                            </tr>
+                            <tr>
+                                <td class="order-addons">Muschrooms</td>
+                                <td class="order-price">3,50$</td>
+                                <td class="order-deleted">x</td>
+
+                            </tr>
+                            <tr class="total-price">
+                                <td>To pay:</td>
+                                <td>8,50$</td>
+
+                            </tr>
+                        </table>
+                        <a class="generator-btn" href="card.html" type="button">Add to card</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>&copy; PizzaGenerator 2021 | Bilka Marcin
+            </p>
+        </div>
+    </footer>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

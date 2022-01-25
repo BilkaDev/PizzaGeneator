@@ -1,0 +1,40 @@
+<div class="pizza-order">
+    <h2 class=" section-heading">Your order:</h2>
+
+    <table>
+        <tr>
+            <th>Addons</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+
+
+{{#each pizzaAddons}}
+    <tr>
+        <td class="order-addons">{{this}}</td>
+        <td class="order-price">{{pricify (find-price @root.addons this)}}$</td>
+        <td  class="order-deleted"> <b data-addon="{{this}}" class="deleted-x">X</b></td>
+
+    </tr>
+{{/each}}
+
+
+        <tr class="total-price">
+            <td>To pay:</td>
+            <td>{{pricify sum}}$</td>
+
+        </tr>
+    </table>
+
+
+    {{#if btn}}
+        {{> pay-btn}}
+
+
+    {{else}}
+        {{> add-btn}}
+
+
+    {{/if}}
+
+</div>
